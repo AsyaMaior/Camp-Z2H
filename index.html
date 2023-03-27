@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPS</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+      type="application/javascript"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <h1>Rock Scissors Paper</h1>
+    </header>
+
+    <p id="action-msg">
+      Make deposit 0.0001 tBNB or more:
+      <input type="text" id="deposit" /><br /><br />
+      Choose rock, scissors or paper. You can win x2 of you deposit!
+    </p>
+
+    <div class="choices">
+      <div class="choice" id="r">
+        <button onclick="playGame(0)">
+          <img src="images/rock.png" alt="" />
+        </button>
+      </div>
+
+      <div class="choice" id="s">
+        <button onclick="playGame(1)">
+          <img src="images/scissors.png" alt="" />
+        </button>
+      </div>
+
+      <div class="choice" id="p">
+        <button onclick="playGame(2)">
+          <img src="images/paper.png" alt="" />
+        </button>
+      </div>
+    </div>
+
+    <div class="result">
+      <p>&nbsp;<span id="result"></span></p>
+    </div>
+
+    <script src="app.js" charset="UTF-8"></script>
+  </body>
+</html>
